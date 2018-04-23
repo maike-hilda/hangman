@@ -38,8 +38,11 @@ function getLetter(event) {
 
 function checkIfIncludes(letter) {
     if (currentWord.includes(letter)) {
-        const index = currentWord.indexOf(letter);
-        currentWordDisplay[index] = letter;
+        for (let i = 0; i < currentWord.length; i++) {
+            if (currentWord[i] === letter) {
+                currentWordDisplay[i] = letter;
+            }
+        }        
         document.getElementById("word").innerHTML = currentWordDisplay;
     } else {
         falseGuesses.push(letter);
