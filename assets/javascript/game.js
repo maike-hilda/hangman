@@ -1,14 +1,9 @@
 "use strict"
 
-document.onkeyup = (getLetter);
-
-function game() {
     const words = ["Harry Potter", "Hermione Granger", "Hagrid", "Ron Weasley"];
     let wins = 0;
 
-    return {
-        
-    }
+   
     function wordGenerator(words) {
         const randIndex = Math.floor(Math.random() * words.length);
         const word = words[randIndex].toUpperCase();
@@ -91,7 +86,8 @@ function game() {
         clearHtmlDisplay("number-of-guesses-remaining");
         displayStringsNicely(currentWordDisplay, "word");
     }
-}
 
+
+document.onkeyup = (getLetter);
 
 resetFunction();
